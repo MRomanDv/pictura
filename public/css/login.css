@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Bungee&family=El+Messiri:wght@700&family=Heebo:wght@300&family=Jura:wght@300;700&family=Lilita+One&family=Monoton&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Playfair+Display+SC&family=Staatliches&family=Syncopate:wght@700&family=Teko:wght@300&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'El Messiri', sans-serif;
+}
+
+.title h2 {
+    font-size: 6vw;
+    color: rgb(209, 197, 197);
+}
+
+.containerbg {
+    width: 100vw;
+    height: 100vh;
+    background: url('/public/imgs/loginbg.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 400px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.input-box label {
+    color: rgb(238, 227, 227);
+    font-size: 2rem;
+    padding-right: 1rem;
+}
+.input-box input {
+    padding: 20px 10px;
+    border: 1px solid #fff;
+    border-top-right-radius: 50%;
+    outline: none;
+    background: transparent;
+    transition: 500ms ease;
+}
+
+.input-box input:focus {
+    border-top-right-radius: 0;
+
+}
+.label-user i {
+    font-size: 1.8rem;
+    color: rgb(185, 51, 51);
+}
+.input-box [type="submit"] {
+     cursor: pointer;
+     background: rgb(31, 30, 30);
+     color: rgb(224, 215, 215);
+     font-size: 1.5rem;
+     padding: 10px;
+     transition: 500ms ease;
+}
+
+.input-box [type="submit"]:hover {
+    background: #cc3030;
+    border-top-right-radius: 0;
+    margin-bottom: 10px;
+}
+
+.input-box button {
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(31, 30, 30);
+    border-top-right-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: 500ms ease;
+}
+
+.input-box button:hover {
+    background: #cc3030;
+    border-top-right-radius: 0;
+    margin-bottom: 10px;
+}
+.input-box button a {
+    text-decoration: none;
+    color: rgb(224, 215, 215);
+    font-size: 1.5rem;
+}
+
+@keyframes hue-animation {
+    0% {
+        filter: hue-rotate(20deg);
+    }
+    20% {
+        filter: hue-rotate(40deg);
+    }
+    50% {
+        filter: hue-rotate(60deg);
+    }
+    70% {
+        filter: hue-rotate(40deg);
+    }
+    100% {
+        filter: hue-rotate(20deg);
+    }
+}
+
+@media screen and (max-width:700px),
+ screen and (max-height:700px) {
+    .title h2 {
+        font-size: 3rem;
+    }
+
+    .login-container {
+        width: 250px;
+        padding: 20px;
+    }
+    .input-box input {
+        padding: 10px;
+        margin-top: 0x;
+    }
+    .input-box button a,
+    .input-box [type="submit"] {
+        font-size: 10px;
+    }
+    .input-box label,
+    .input-box i {
+        font-size: 1rem;
+    }
+    
+}
+

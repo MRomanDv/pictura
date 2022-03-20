@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/login.css">
+    <!--FONT-AWESOME--> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/> 
+    <title>Log in</title>
+</head>
+<body>
+    <div class="containerbg">
+        <div class="content">
+            <div class="title"><h2>Log in</h2>
+            </div>
+            <div class="login-container">
+                <form action="/login" method="post">
+                    <div class="input-box">
+                        <div class="label-user">
+                        <label for="user">User</label>
+                        <i class="fa-solid fa-user"></i>
+                        </div>
+                        <input type="text" name="user" id="user" required>
+                    </div>
+                    <div class="input-box">
+                        <div class="label-user">
+                            <label for="pass">Password</label><i class="fa-solid fa-lock"></i>
+                        </div>
+                        <input type="password" name="pass" id="pass" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" value="login">
+                    </div>
+                </form>
+                <div class="input-box">
+                    <button><a href="/signin">Create account</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!--Sweetalert2-->
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+   <% if(typeof alert != "undefined") { %>
+    <script>
+        Swal.fire({
+            title: '<%=alertTitle%>',
+            text: '<%=alertMessage%>',
+            icon: '<%=alertIcon%>',
+            showConfirmButton: <%= showConfirmButton %>,
+            timer: <%= timer %>
+        }).then(()=>{
+            window.location= '/<%= ruta %>' 
+        })
+    </script>
+    <%} %>  
+</body>
+</html>

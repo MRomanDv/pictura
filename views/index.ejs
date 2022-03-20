@@ -32,16 +32,23 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home page</a>
+              <a class="nav-link active" aria-current="page" href="/">Home page</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Welcome user</a>
+              <% if (user) { %>
+                <a class="nav-link" href="#">Welcome <%= user.fullname %></a>
+              <% }else { %>
+                <a class="nav-link" href="/login">Log in</a>
+             <% } %>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log out</a>
+              <a class="nav-link" href="/logout">Log out</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Play Quiz game</a>
+              <a class="nav-link" href="/signin">Create account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/quizgame">Play Quiz game</a>
             </li>
           </ul>
         </div>
@@ -183,51 +190,62 @@
   <!--SIGN UP WITH EMAIL-->
 
   <div class="signup">
-    <h3>Get in touch!! sign up with your email</h3>
+    <h3><a href="/signin">Get in touch!! Create an account</a></h3>
   </div>
 
-  <!--FORM-->
-  <div class="container">
-    <form class="row g-3 p-5">
-      <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail4">
+  <!--becomeamember-->
+  <section class="become-member">
+    <!--First-box-->
+    <div class="dicover-member">
+      <div class="title-pictura">
+        <div><h3>Discover more
+          as a member</h3></div>
+          <div class="text-member">
+            Join today and experience the art you love
+            with greater access, exclusive programming,
+            and new ways to make connections.
+          </div>
       </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
+      <div class="img1">
+        <img src="/public/imgs/sculpture1.png" alt="">
       </div>
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="col-12 col-md-6">
-        <label for="inputAddress2" class="form-label">Address 2</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-      </div>
-      <div class="col-md-6">
-        <label for="inputCity" class="form-label">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
-          <label class="form-check-label" for="gridCheck">
-            Agree with terms and conditions
-          </label>
+    </div>
+
+    <!--Second-box-cards-->
+    <div class="cards-container-pictura">
+      <div class="member-card">
+        <div class="card-main-title">Access</div>
+        <div class="sub-title">$110/year</div>
+        <div>
+         See and do more with free admission every day, member-only hours, and engaging digital content.
         </div>
       </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+      <div class="member-card">
+        <div class="card-main-title">Explore</div>
+        <div class="sub-title">$200/year</div>
+        <div>
+         Curator talks, family programs, and more—dive into all that Pictura has to offer you.
+        </div>
       </div>
-    </form>
-  
-  </div>
-
-  
+      <div class="member-card">
+        <div class="card-main-title">Supporting</div>
+        <div class="sub-title">$480/year</div>
+        <div>
+         Share your love of art with friends and family, and connect with others at special celebrations.
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="card-main-title">Annual Pass</div>
+        <div class="sub-title">$390/year</div>
+        <div>
+          Unlock free admission to the Pictura Museum. Come back again and again to enjoy extraordinary art all year.
+        </div>
+      </div>
+    </div>
+  </section>
+     
   <footer>
     <div class="allrightss"><h4>Pictura All rights reserved ©</h4></div>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="svgwave"><path fill="#273036" fill-opacity="1" d="M0,288L80,277.3C160,267,320,245,480,229.3C640,213,800,203,960,170.7C1120,139,1280,85,1360,58.7L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg>
   </footer>
     
   <script src="/public/js/index.js"></script>

@@ -7,6 +7,8 @@ const scroll = (entry,observer)=> {
    entry.forEach(element => {
        if(element.isIntersecting) {
            element.target.classList.add('visible')
+       }else {
+           element.target.classList.remove('visible')
        }
    })
 }
@@ -14,7 +16,7 @@ const scroll = (entry,observer)=> {
 const observer = new IntersectionObserver(scroll, {
     root:null,
     rootMargin:'0px 0px 0px 0px',
-    threshold:.3
+    threshold:.1
 })
 
 observer.observe(img)
